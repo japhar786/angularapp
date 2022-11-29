@@ -1,0 +1,51 @@
+<h1>Directive Assignment</h1>
+<h2>NgFor Example</h2>
+<div>
+    <table class="table" class="content-table">
+        <thead>
+            <tr>
+                <th colspan="4" class="ok">{{title}}</th>
+            </tr>
+            <tr>
+                <th>No.</th>
+                <th>Country</th>
+                <th>Capital</th>
+                <th>Language</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let car of cars">
+                <td>{{car.no}}</td>
+                <td>{{car.country}}</td>
+                <td>{{car.capital}}</td>
+                <td>{{car.language}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h2>NgSwitch Example</h2>
+<div >
+    <table class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" (change)="getProductValue($event)">
+                <td><option value="Default">Select Country</option></td>
+                <option value="India">India</option>
+                <option value="China">China</option>
+                <option value="Japan">Japan</option>
+                <option value="Canada">Canada</option>
+            </select>
+        </div>
+        <div class="col-md-12" [ngSwitch]="selectedProduct" >
+            <h2 class="text-success" *ngSwitchDefault>Please select Country</h2>
+            <h2 class="text-success" *ngSwitchCase="'India'">India</h2>
+            <h2 class="text-success" *ngSwitchCase="'China'">China</h2>
+            <h2 class="text-success" *ngSwitchCase="'Japan'">Japan</h2>
+            <h2 class="text-success" *ngSwitchCase="'Canada'">Canada</h2>
+        </div>
+    </div>
+    </table>
+</div>
+
+

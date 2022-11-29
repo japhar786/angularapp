@@ -1,0 +1,24 @@
+<h2>INPUT DECORATOR ASSIGNMENT</h2>
+<div>
+    <table class="table" class="content-table">
+        <thead >
+<tr>
+    <th>Employee Id</th>
+    <th>Employee Name</th>
+    <th>Employee Department</th>
+    <th>Employee Salary</th>
+    <th>Employee Company</th>
+</tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let emp of employee_new">
+            <td>{{emp.emp_id}}</td>
+            <td>{{emp.emp_name}}</td>
+            <td>{{emp.emp_dept}}</td>
+            <td>{{emp.emp_salary}}</td>
+            <td>{{emp.emp_company}}</td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
